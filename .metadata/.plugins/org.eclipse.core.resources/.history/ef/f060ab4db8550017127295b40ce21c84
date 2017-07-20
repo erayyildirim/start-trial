@@ -1,0 +1,18 @@
+package uygulamaCircle;
+
+public class Circle {
+	double radius;  //yarıcap
+	double circleAlan;
+	
+	double alan ( double radius){
+		circleAlan= radius*radius*3.14;
+		System.out.println("Dairenin alanı =" + circleAlan);
+		return circleAlan;
+			}
+	
+	double cevre (double radius){
+		double i = 2*3.14*radius;
+		System.out.println(i);
+	}
+
+}

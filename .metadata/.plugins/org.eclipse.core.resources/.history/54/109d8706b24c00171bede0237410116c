@@ -1,0 +1,11 @@
+
+public class Variables {
+	public static void main(String[] args){
+		String type1;
+		int type2;
+		float type3;
+		byte type4;
+		System.out.println( type2);
+		
+	}
+}

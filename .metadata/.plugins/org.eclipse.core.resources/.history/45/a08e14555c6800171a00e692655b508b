@@ -1,0 +1,31 @@
+import java.math.BigDecimal;
+
+
+public class Casts {
+	public static void main(String[] args){
+		byte b = 0;
+		short s = 9999;
+		char c;
+		int i = 250020000;
+		float f = 921.4586f;
+		double d = 6.45852147d;
+		double e;
+	//	c = b; cannot convert from byte to char
+	//	b = s;                     short to byte
+	//	c = i;                     int to char
+	//	f = i;
+	//	System.out.println(f);      // veri kaybı olustu
+		
+	//	i = f; cannot conver from float to int
+		
+	//	b = (byte) s;
+		System.out.println(b);
+		e=f;
+		System.out.println("float e = f --> " + e);
+		System.out.println("new big decimal --> " + new BigDecimal(e));
+		System.out.println("f= " + f);
+		System.out.println("f BigDecimal = " + new BigDecimal(f));
+						
+	}
+
+}

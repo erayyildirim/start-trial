@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Jul 20 01:54:31 EET 2017
+org.eclipse.jst.jee.server\:ServletStart=/home/eray/eray/Java/tomcatt1/apache-tomcat-7.0.79/wtpwebapps/ServletStart
+org.eclipse.jst.jee.server\:ServletBegin=/home/eray/eray/Java/tomcatt1/apache-tomcat-7.0.79/wtpwebapps/ServletBegin

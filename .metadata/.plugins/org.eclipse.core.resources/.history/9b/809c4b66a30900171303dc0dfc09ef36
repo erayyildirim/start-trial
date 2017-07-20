@@ -1,0 +1,73 @@
+package per;
+
+public class permutation {
+	public static void main(String[] args) {
+		System.out.println(permutation("fabcdfedfaaa","abacdaedfaff"));
+	}
+	
+	/**
+	 * Check if the two strings have identical character counts -- the permutation is not same as I think
+	 * 
+	 * make ever char as position, and increase 	 
+	 */
+	public static boolean permutation(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		
+		int[] arr = new int[256]; // assume character is ASCII
+		for (int i=0; i< s.length(); i++) {
+			char value = s.charAt(i);
+			arr[value] ++;
+		}
+		
+		for (int i=0; i< t.length(); i++) {
+			int value = t.charAt(i);
+			if (--arr[value] < 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Sort two strings and compare(use sort api) 
+	 */
+	public static boolean permutation2(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}
+	
+	public static String sort(String str) {
+		char[] temp = str.toCharArray();
+		java.util.Arrays.sort(temp);
+		return new String(temp);
+	}
+	
+	
+	
+	/**
+	 * My Solution
+	 * s[0] == t[length-1]  s[1] == t[length-1-1] .... 
+	 * two pointer, one is on s header, the other one is on t end, make comparation
+	 */
+	
+	public static boolean permutation3 (String s, String t) {
+		if (s == null || t == null) {
+			return false;
+		}
+		if (s.length() != t.length()) {
+			return false;
+		}
+		
+		for (int i= 0; i< s.length(); i++) {
+			if (s.charAt(i) != t.charAt(s.length() -1 - i)) {
+				return false;
+			}
+		}
+		return true;
+		
+}
+}

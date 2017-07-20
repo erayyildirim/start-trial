@@ -1,0 +1,10 @@
+package _05_Request;
+
+import javax.servlet.http.HttpServlet;
+
+public class RequestGetForm extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServlet req, HttpServlet resp)
+
+}

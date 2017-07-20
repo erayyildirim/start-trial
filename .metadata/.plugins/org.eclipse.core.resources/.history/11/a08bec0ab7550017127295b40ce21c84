@@ -1,0 +1,10 @@
+package uygulamaCircle;
+
+public class Circle {
+	double radius;  //yarıcap
+	
+	double alan ( double radius){
+		return radius*radius*3.14;
+			}
+
+}

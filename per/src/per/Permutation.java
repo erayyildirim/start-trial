@@ -1,0 +1,51 @@
+package per;
+
+public class Permutation {
+	public static void main(String[] args) {
+		System.out.println(permutation("fabcdfedfaaa","abacdaedfaff"));
+	}
+	
+	
+	public static boolean permutation(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		
+		int[] arr = new int[256]; // assume character is ASCII
+		for (int i=0; i< s.length(); i++) {
+			char value = s.charAt(i);
+			arr[value] ++;
+		}
+		
+		for (int i=0; i< t.length(); i++) {
+			int value = t.charAt(i);
+			if (--arr[value] < 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Sort two strings and compare(use sort api) 
+	 */
+	public static boolean permutation2(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}
+	
+	public static String sort(String str) {
+		char[] temp = str.toCharArray();
+		java.util.Arrays.sort(temp);
+		return new String(temp);
+	}
+	
+	
+	
+	
+	
+	
+
+}

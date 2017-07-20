@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class RelationalOperations {
+	public static void main (String[] args){
+		
+		Random rand = new Random();
+		int i = rand.nextInt() % 100; // 2^32 tane sayıyı alır nextınt
+		int j = rand.nextInt() % 100;
+		
+		System.out.println("i = " + i);
+		System.out.println("j = " + j);
+		
+		System.out.println("i > j is " + (i>j));
+		System.out.println("i < j is " + (i<j));
+		System.out.println("i >= j is " + (i>=j));
+		System.out.println("i <= j is " + (i<=j));
+		System.out.println("i == j is " + (i==j));
+		System.out.println("i != j is " + (i!=j));
+		
+		boolean b1 = true;
+		boolean b2 = false;
+		
+		if(b1 == b2){
+			System.out.println("The same");
+		}
+		else{
+			System.out.println("Different");
+		}
+		
+		if (b1)
+			System.out.println("true");
+		
+		String s1 = new String("String");
+		String s2 = new String ("String");
+		
+		if(s1 == s2)
+			System.out.println("same");
+		else System.out.println("different address"); // farklıdır cunku farklı adres degerlerını gosterırler
+		
+		
+	}
+
+}

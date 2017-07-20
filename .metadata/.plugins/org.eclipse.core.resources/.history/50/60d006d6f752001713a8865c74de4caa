@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class SwitchDemo {
+	public static void main (String[] args){
+		
+		System.out.println("Please enter a number:");
+		Scanner stdin = new Scanner(System.in);
+		int month = stdin.nextInt();
+		
+		System.out.println(month);
+		
+	}
+
+}

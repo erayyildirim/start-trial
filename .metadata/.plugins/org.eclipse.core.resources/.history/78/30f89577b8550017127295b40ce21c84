@@ -1,0 +1,15 @@
+package uygulamaCircle;
+
+public class uygulamaCircleTest {
+	public static void main(String [] args){
+		
+		Circle c1 = new Circle();
+		
+		//12.56
+		
+		c1.alan(3);
+		c1.cevre(3);
+		
+	}
+
+}
